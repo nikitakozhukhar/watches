@@ -53,7 +53,7 @@ export function Watch({watch, handleRemove}) {
 
   useEffect(() => {
     changeTime()
-    console.log(time)
+    
     const diff = 1000 - new Date().getMilliseconds()
     let interval;
 
@@ -64,8 +64,8 @@ export function Watch({watch, handleRemove}) {
     return () => clearInterval(interval)
   }, [])
 
-  const formatTime = digit => digit > 0 ? digit: `0${digit}`
-  // console.log(time)
+  const formatTime = digit => digit >= 9 ? digit : `0${digit}`
+  
   return (
    <div className={'watches__item item-watches'}>
         <div className={'item-watches__title'}>{watch.title}</div>

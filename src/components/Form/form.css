@@ -1,12 +1,12 @@
 .form {
   display: flex;
-  /* align-items: center; */
-  justify-content: center;
 }
 
 .form__container {
   display: flex;
+  justify-content: center;
   width: 100vw;
+  margin: 0 auto;
   margin-bottom: 20px;
   padding: 5px;
   gap: 20px;
@@ -19,4 +19,24 @@
   flex-direction: column;
   flex-basis: 200px;
   gap: 10px;
+}
+
+.input__title,
+.input__timezone,
+.form__btn {
+  height: 2em;
+  padding: 0 10px;
+  border: 1px solid #e7ebe7;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #e7ebe7, /* Легкое свечение */
+              0 0 20px #e7ebe7, 
+              0 0 40px #e7ebe7, /* Сильное свечение */
+              0 0 80px #e7ebe7;
+}
+
+.form__btn {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  color: rgba(9, 5, 68, 0.541)
 }
