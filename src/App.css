@@ -1,0 +1,36 @@
+.watches {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Убираем скролл, если что-то выходит за пределы */
+
+  /* Добавляем фон */
+  background-image: url('../assets/map.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; /* Или cover */
+  background-position: center center;
+}
+
+.watches::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Полупрозрачная маска */
+  background-color: rgba(0, 0, 0, 0.6); /* Маска с прозрачностью */
+
+  z-index: 1; /* Это ниже контента, но выше фона */
+}
+
+.watches__items {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.watches__items, form {
+  position: relative;
+  z-index: 2; /* Контент будет выше маски */
+}

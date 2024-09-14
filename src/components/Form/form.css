@@ -1,0 +1,22 @@
+.form {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.form__container {
+  display: flex;
+  width: 100vw;
+  margin-bottom: 20px;
+  padding: 5px;
+  gap: 20px;
+  color: aliceblue;
+}
+
+.form__input-title, 
+.form__input-timezone {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 200px;
+  gap: 10px;
+}
